@@ -1,0 +1,3 @@
+NAME                            READY   STATUS    RESTARTS   AGE   IP          NODE           NOMINATED NODE   READINESS GATES
+webapp-segura-5f5fb6665-d6qmm   1/1     Running   0          34m   10.42.0.9   vm1-objetivo   <none>           <none>
+webapp-segura-5f5fb6665-wtvpb   1/1     Running   0          34m   10.42.1.4   vm2-monitor    <none>           <none>

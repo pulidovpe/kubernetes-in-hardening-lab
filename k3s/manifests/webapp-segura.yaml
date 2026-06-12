@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-segura
+  namespace: produccion
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp-segura
+  template:
+    metadata:
+      labels:
+        app: webapp-segura
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+      - name: webapp
+        image: nginx:alpine
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: [ALL]
+        resources:
+          requests:
+            memory: '64Mi'
+            cpu: '50m'
+          limits:
+            memory: '128Mi'
+            cpu: '200m'
+        volumeMounts:
+        - {name: tmp-vol, mountPath: /tmp}
+        - {name: cache-vol, mountPath: /var/cache/nginx}
+        - {name: run-vol, mountPath: /var/run}
+      volumes:
+      - {name: tmp-vol, emptyDir: {}}
+      - {name: cache-vol, emptyDir: {}}
+      - {name: run-vol, emptyDir: {}}
+
