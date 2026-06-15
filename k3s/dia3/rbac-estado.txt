@@ -1,0 +1,23 @@
+NAMESPACE     NAME                                                                            CREATED AT
+desarrollo    role.rbac.authorization.k8s.io/rol-desarrollador                                2026-06-15T15:31:06Z
+kube-public   role.rbac.authorization.k8s.io/system:controller:bootstrap-signer               2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/extension-apiserver-authentication-reader        2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/system::leader-locking-kube-controller-manager   2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/system::leader-locking-kube-scheduler            2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/system:controller:bootstrap-signer               2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/system:controller:cloud-provider                 2026-06-12T14:49:44Z
+kube-system   role.rbac.authorization.k8s.io/system:controller:token-cleaner                  2026-06-12T14:49:44Z
+produccion    role.rbac.authorization.k8s.io/webapp-role                                      2026-06-15T22:05:52Z
+
+NAMESPACE     NAME                                                                                       ROLE                                                  AGE
+desarrollo    rolebinding.rbac.authorization.k8s.io/dev-juan-binding                                     Role/rol-desarrollador                                6h53m
+kube-public   rolebinding.rbac.authorization.k8s.io/system:controller:bootstrap-signer                   Role/system:controller:bootstrap-signer               3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/k3s-cloud-controller-manager-authentication-reader   Role/extension-apiserver-authentication-reader        3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/metrics-server-auth-reader                           Role/extension-apiserver-authentication-reader        3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system::extension-apiserver-authentication-reader    Role/extension-apiserver-authentication-reader        3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system::leader-locking-kube-controller-manager       Role/system::leader-locking-kube-controller-manager   3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system::leader-locking-kube-scheduler                Role/system::leader-locking-kube-scheduler            3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system:controller:bootstrap-signer                   Role/system:controller:bootstrap-signer               3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system:controller:cloud-provider                     Role/system:controller:cloud-provider                 3d7h
+kube-system   rolebinding.rbac.authorization.k8s.io/system:controller:token-cleaner                      Role/system:controller:token-cleaner                  3d7h
+produccion    rolebinding.rbac.authorization.k8s.io/webapp-role-binding                                  Role/webapp-role                                      18m

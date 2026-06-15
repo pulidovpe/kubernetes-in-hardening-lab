@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: desarrollo
+  name: rol-desarrollador
+rules:
+- apiGroups: ['']
+  resources: ['pods', 'pods/log']
+  verbs: ['get', 'list', 'watch']
+- apiGroups: ['apps']
+  resources: ['deployments']
+  verbs: ['get', 'list', 'watch']
+# NO puede: create, delete, ni acceder a secrets
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: dev-juan-binding
+  namespace: desarrollo
+subjects:
+- kind: User
+  name: dev-juan
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: rol-desarrollador
+  apiGroup: rbac.authorization.k8s.io
