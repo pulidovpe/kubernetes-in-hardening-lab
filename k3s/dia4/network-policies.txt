@@ -1,0 +1,4 @@
+NAMESPACE    NAME               POD-SELECTOR        AGE
+produccion   allow-dns-egress   <none>              21m
+produccion   default-deny-all   <none>              21m
+produccion   webapp-ingress     app=webapp-segura   21m

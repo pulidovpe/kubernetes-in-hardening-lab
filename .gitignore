@@ -1,2 +1,3 @@
 k3s.yaml
 *.kubeconfig
+k3s/usuarios/dev-juan.key

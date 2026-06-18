@@ -1,0 +1,41 @@
+# Política 1: denegar TODO el tráfico en produccion
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-all
+  namespace: produccion
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+---
+# Política 2: permitir DNS saliente (pods necesitan resolver)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-dns-egress
+  namespace: produccion
+spec:
+  podSelector: {}
+  policyTypes: [Egress]
+  egress:
+  - ports:
+    - {protocol: UDP, port: 53}
+---
+# Política 3: webapp acepta tráfico solo desde monitoreo
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: webapp-ingress
+  namespace: produccion
+spec:
+  podSelector:
+    matchLabels:
+      app: webapp-segura
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          env: monitoring
+    ports:
+    - {protocol: TCP, port: 8080}
