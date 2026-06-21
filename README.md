@@ -11,12 +11,12 @@ Repository dedicated to documenting hardening practices, access controls, networ
 
 | Día | Enfoque Tecnológico | Entidades Evaluadas / Entregables | Estado |
 | :--- | :--- | :--- | :--- |
-| **Día 1** | Reconocimiento inicial | `nodos.txt`, `versiones.txt` | 🟢 Completado |
-| **Día 2** | Auditoría de cargas de trabajo | `pods-produccion.txt` | 🟢 Completado |
-| **Día 3** | Gestión de Accesos (RBAC) | `rbac-estado.txt`, `csr-dev-juan.yaml` | 🟢 Completado |
-| **Día 4** | Seguridad de Red (Network Policies) | `network-policies.txt`, `netpol-produccion.yaml` | 🟢 Completado |
-| **Día 5** | Gestión de Secretos | `secrets-inventario.txt`, `pod-con-secret.yaml` | 🟢 Completado |
-| **Día 6** | Seguridad en Tiempo de Ejecución (Runtime) | **Trivy Static Scanning, Falco Security DaemonSet (eBPF)** | 🟢 Completado |
+| **Día 1** | Instalación K3s: server en VM1 + agent en VM2  | `nodos.txt`, `versiones.txt` | 🟢 Completado |
+| **Día 2** | Workloads seguros: Pods, Deployments y namespaces | `pods-produccion.txt` | 🟢 Completado |
+| **Día 3** | RBAC: usuarios, roles y permisos mínimos | `rbac-estado.txt`, `csr-dev-juan.yaml` | 🟢 Completado |
+| **Día 4** | Network Policies: segmentación de tráfico entre pods | `network-policies.txt`, `netpol-produccion.yaml` | 🟢 Completado |
+| **Día 5** | Secrets: gestión segura de credenciales en K8s | `secrets-inventario.txt`, `pod-con-secret.yaml` | 🟢 Completado |
+| **Día 6** | Trivy + Falco: auditoría de imágenes y runtime | **Trivy Static Scanning, Falco Security DaemonSet (eBPF)** | 🟢 Completado |
 | **Día 7** | *Por definir / Simulación de ataques y análisis forense* | *Próximamente* | 🟡 Planificado |
 | **Día 8** | *Por definir / Documentación, GitHub y reflexión final* | *Próximamente* | 🟡 Planificado |
 
