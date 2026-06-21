@@ -1,0 +1,21 @@
+# falco-values.yaml
+driver:
+  kind: modern_ebpf
+
+# Deshabilitar falcoctl para la instalación automática de drivers obsoletos
+falcoctl:
+  driver:
+    enabled: false
+
+# Inyectar tus reglas personalizadas del laboratorio directamente
+customRules:
+  lab-rules.yaml: |
+    - rule: Lectura de archivo sensible en contenedor
+      desc: Un proceso dentro de un contenedor de Kubernetes lee /etc/shadow o /etc/passwd
+      condition: >
+        open_read 
+        and container.id != "host" 
+        and (fd.name = "/etc/shadow" or fd.name = "/etc/passwd")
+      output: "ALERTA DAEMONSET: Archivo sensible leido (usuario=%user.name proceso=%proc.name archivo=%fd.name info=%container.info)"
+      priority: CRITICAL
+      tags: [contenedor, seguridad]
