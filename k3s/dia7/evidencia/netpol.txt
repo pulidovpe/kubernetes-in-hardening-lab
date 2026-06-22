@@ -1,0 +1,4 @@
+NAMESPACE    NAME               POD-SELECTOR        AGE
+produccion   allow-dns-egress   <none>              3d17h
+produccion   default-deny-all   <none>              3d17h
+produccion   webapp-ingress     app=webapp-segura   3d17h
