@@ -17,29 +17,25 @@ Repository dedicated to documenting hardening practices, access controls, networ
 | **Día 4** | Network Policies: segmentación de tráfico entre pods | `network-policies.txt`, `netpol-produccion.yaml` | 🟢 Completado |
 | **Día 5** | Secrets: gestión segura de credenciales en K8s | `secrets-inventario.txt`, `pod-con-secret.yaml` | 🟢 Completado |
 | **Día 6** | Trivy + Falco: auditoría de imágenes y runtime | **Trivy Static Scanning, Falco Security DaemonSet (eBPF)** | 🟢 Completado |
-| **Día 7** | *Por definir / Simulación de ataques y análisis forense* | *Próximamente* | 🟡 Planificado |
-| **Día 8** | *Por definir / Documentación, GitHub y reflexión final* | *Próximamente* | 🟡 Planificado |
+| **Día 7** | *Simulación de ataques y análisis forense* | `evidencia/` | 🟢 Completado |
+| **Día 8** | *Documentación, GitHub* | `kube-bench-report-final.txt` | 🟢 Completado |
 
 ---
+## 🚀 Detalles de las Últimas Sesiones
 
-## 🚀 Detalle: Día 6 - Trivy + Falco Runtime Security
+### Día 7 - Simulación de Ataques + Evidencia Forense
+Se ejecutaron simulaciones controladas de compromisos de contenedores desde la `vm3-atacante`.
+* **Acciones:** Inyección de payloads de lectura sobre `/etc/shadow` y ejecución de binarios sospechosos en caliente.
+* **Resultado:** Validación de las reglas de telemetría de Falco y captura exitosa de logs de auditoría forense que confirman la contención del ataque.
 
-En esta sesión se implementó una estrategia defensiva de dos capas: **Análisis Estático (Shift Left)** y **Seguridad Activa en Caliente (Runtime Security)**.
+### Día 8 - Kube-Bench CIS Compliance + Cierre
+Auditoría formal de las configuraciones de seguridad del Control Plane y los Nodos Trabajadores frente a los estándares de la industria.
+* **Estrategia Utilizada:** Implementación del set de configuraciones clonadas externamente ejecutando:
+  ```bash
+  sudo kube-bench run --config-dir /etc/kube-bench/cfg --version 1.31 > kube-bench-report-vm2.txt
+  ```
 
-### 1. Escaneo de Vulnerabilidades con Trivy
-Se instaló `trivy` en el nodo de gestión (`vm3-atacante`) para auditar las imágenes de contenedor antes y durante su ciclo de vida en el clúster.
-* **Evidencia:** Reportes almacenados en `k3s/dia6/`.
-
-### 2. Monitoreo en Tiempo de Ejecución con Falco (DaemonSet)
-Para garantizar visibilidad total sin importar el agendamiento de Pods (`vm1-objetivo`, `vm2`), se migró la arquitectura hacia un modelo nativo en Kubernetes utilizando **Helm**.
-
-* **Motor Utilizado:** Sonda de eBPF Moderno (`modern_ebpf`), óptimo para entornos virtualizados ARM64 sobre UTM.
-* **Despliegue:** `helm install falco falcosecurity/falco -f k3s/manifests/falco-values.yaml --namespace falco`
-
-#### Reglas Personalizadas de Auditoría Implementadas:
-* **Detección de Lectura de Archivos Sensibles:** Alerta crítica disparada mediante syscalls exitosas (`open_read`) enfocadas en los contenedores (`container.id != host`) apuntando a `/etc/shadow` y `/etc/passwd`.
-* **Filtro de Falsos Positivos:** Exclusión exitosa de llamadas masivas originadas por demonios del sistema operativo base (como `auditd` del host).
-
+* **Entregables:** Reportes de conformidad almacenados en el repositorio listos para su remediación en futuras iteraciones.
 ---
 
 ## 🛠️ Próxima Fase: GitOps & Continuous Delivery con ArgoCD
