@@ -1,0 +1,2 @@
+NAME  	NAMESPACE	REVISION	UPDATED                               	STATUS  	CHART         	APP VERSION
+argocd	argocd   	1       	2026-06-29 22:05:54.91974864 +0000 UTC	deployed	argo-cd-10.0.1	v3.4.4     
