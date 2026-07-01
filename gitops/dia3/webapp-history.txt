@@ -1,0 +1,10 @@
+SOURCE  https://github.com/pulidovpe/kubernetes-in-hardening-lab
+ID      DATE                           REVISION
+0       2026-07-01 16:35:21 +0000 UTC  HEAD (52bc0d6)
+1       2026-07-01 16:41:25 +0000 UTC  HEAD (df6e221)
+2       2026-07-01 20:14:13 +0000 UTC  HEAD (613c7c5)
+3       2026-07-01 20:20:48 +0000 UTC  HEAD (d3d36b6)
+4       2026-07-01 20:26:06 +0000 UTC  HEAD (ec9b410)
+5       2026-07-01 20:42:50 +0000 UTC  HEAD (67ac41d)
+6       2026-07-01 20:44:58 +0000 UTC  HEAD (67ac41d)
+7       2026-07-01 20:46:09 +0000 UTC  HEAD (67ac41d)

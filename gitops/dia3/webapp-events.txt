@@ -1,0 +1,91 @@
+LAST SEEN   TYPE      REASON              OBJECT                         MESSAGE
+28m         Normal    Scheduled           pod/webapp-54d7b67f6b-bn7b4    Successfully assigned webapp/webapp-54d7b67f6b-bn7b4 to vm1-objetivo
+28m         Normal    Pulled              pod/webapp-54d7b67f6b-bn7b4    Container image "nginx:alpine" already present on machine and can be accessed by the pod
+28m         Normal    Created             pod/webapp-54d7b67f6b-bn7b4    Container created
+28m         Normal    Started             pod/webapp-54d7b67f6b-bn7b4    Container started
+22m         Normal    Killing             pod/webapp-54d7b67f6b-bn7b4    Stopping container webapp
+5m51s       Normal    Killing             pod/webapp-54d7b67f6b-t4wch    Stopping container webapp
+34m         Normal    Killing             pod/webapp-54d7b67f6b-t8dnq    Stopping container webapp
+28m         Normal    Scheduled           pod/webapp-54d7b67f6b-tfb6f    Successfully assigned webapp/webapp-54d7b67f6b-tfb6f to vm2-monitor
+28m         Normal    Pulled              pod/webapp-54d7b67f6b-tfb6f    Container image "nginx:alpine" already present on machine and can be accessed by the pod
+28m         Normal    Created             pod/webapp-54d7b67f6b-tfb6f    Container created
+28m         Normal    Started             pod/webapp-54d7b67f6b-tfb6f    Container started
+5m57s       Normal    Killing             pod/webapp-54d7b67f6b-tfb6f    Stopping container webapp
+5m56s       Normal    Killing             pod/webapp-54d7b67f6b-tg5wl    Stopping container webapp
+34m         Normal    SuccessfulDelete    replicaset/webapp-54d7b67f6b   Deleted pod: webapp-54d7b67f6b-t8dnq
+28m         Normal    SuccessfulCreate    replicaset/webapp-54d7b67f6b   Created pod: webapp-54d7b67f6b-bn7b4
+28m         Normal    SuccessfulCreate    replicaset/webapp-54d7b67f6b   Created pod: webapp-54d7b67f6b-tfb6f
+22m         Normal    SuccessfulDelete    replicaset/webapp-54d7b67f6b   Deleted pod: webapp-54d7b67f6b-bn7b4
+5m57s       Normal    SuccessfulDelete    replicaset/webapp-54d7b67f6b   Deleted pod: webapp-54d7b67f6b-tfb6f
+5m56s       Normal    SuccessfulDelete    replicaset/webapp-54d7b67f6b   Deleted pod: webapp-54d7b67f6b-tg5wl
+5m51s       Normal    SuccessfulDelete    replicaset/webapp-54d7b67f6b   Deleted pod: webapp-54d7b67f6b-t4wch
+6m9s        Normal    Scheduled           pod/webapp-6c59b98977-9twlg    Successfully assigned webapp/webapp-6c59b98977-9twlg to vm2-monitor
+6m3s        Normal    Pulling             pod/webapp-6c59b98977-9twlg    Pulling image "nginx:1.27-alpine"
+5m52s       Normal    Pulled              pod/webapp-6c59b98977-9twlg    Successfully pulled image "nginx:1.27-alpine" in 10.959s (10.959s including waiting). Image size: 21832241 bytes.
+5m52s       Normal    Created             pod/webapp-6c59b98977-9twlg    Container created
+5m52s       Normal    Started             pod/webapp-6c59b98977-9twlg    Container started
+4m44s       Normal    Scheduled           pod/webapp-6c59b98977-cdlbm    Successfully assigned webapp/webapp-6c59b98977-cdlbm to vm1-objetivo
+5m57s       Normal    Scheduled           pod/webapp-6c59b98977-cf9ps    Successfully assigned webapp/webapp-6c59b98977-cf9ps to vm1-objetivo
+5m56s       Normal    Pulled              pod/webapp-6c59b98977-cf9ps    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+5m56s       Normal    Created             pod/webapp-6c59b98977-cf9ps    Container created
+5m56s       Normal    Started             pod/webapp-6c59b98977-cf9ps    Container started
+2m17s       Normal    Scheduled           pod/webapp-6c59b98977-fw4f6    Successfully assigned webapp/webapp-6c59b98977-fw4f6 to vm2-monitor
+2m17s       Normal    Pulled              pod/webapp-6c59b98977-fw4f6    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+2m17s       Normal    Created             pod/webapp-6c59b98977-fw4f6    Container created
+2m17s       Normal    Started             pod/webapp-6c59b98977-fw4f6    Container started
+2m17s       Normal    Scheduled           pod/webapp-6c59b98977-j758n    Successfully assigned webapp/webapp-6c59b98977-j758n to vm1-objetivo
+2m17s       Normal    Pulled              pod/webapp-6c59b98977-j758n    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+2m17s       Normal    Created             pod/webapp-6c59b98977-j758n    Container created
+2m17s       Normal    Started             pod/webapp-6c59b98977-j758n    Container started
+5m56s       Normal    Scheduled           pod/webapp-6c59b98977-snqhg    Successfully assigned webapp/webapp-6c59b98977-snqhg to vm2-monitor
+5m55s       Normal    Pulling             pod/webapp-6c59b98977-snqhg    Pulling image "nginx:1.27-alpine"
+5m52s       Normal    Pulled              pod/webapp-6c59b98977-snqhg    Successfully pulled image "nginx:1.27-alpine" in 3.752s (3.752s including waiting). Image size: 21832241 bytes.
+5m52s       Normal    Created             pod/webapp-6c59b98977-snqhg    Container created
+5m52s       Normal    Started             pod/webapp-6c59b98977-snqhg    Container started
+2m18s       Normal    Killing             pod/webapp-6c59b98977-snqhg    Stopping container webapp
+6m9s        Normal    Scheduled           pod/webapp-6c59b98977-wdlhk    Successfully assigned webapp/webapp-6c59b98977-wdlhk to vm1-objetivo
+6m9s        Normal    Pulling             pod/webapp-6c59b98977-wdlhk    Pulling image "nginx:1.27-alpine"
+5m58s       Normal    Pulled              pod/webapp-6c59b98977-wdlhk    Successfully pulled image "nginx:1.27-alpine" in 10.921s (10.921s including waiting). Image size: 21832241 bytes.
+5m58s       Normal    Created             pod/webapp-6c59b98977-wdlhk    Container created
+5m58s       Normal    Started             pod/webapp-6c59b98977-wdlhk    Container started
+2m18s       Normal    Killing             pod/webapp-6c59b98977-wdlhk    Stopping container webapp
+6m9s        Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-wdlhk
+6m9s        Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-9twlg
+5m57s       Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-cf9ps
+5m56s       Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-snqhg
+4m44s       Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-cdlbm
+4m44s       Normal    SuccessfulDelete    replicaset/webapp-6c59b98977   Deleted pod: webapp-6c59b98977-cdlbm
+2m18s       Normal    SuccessfulDelete    replicaset/webapp-6c59b98977   Deleted pod: webapp-6c59b98977-wdlhk
+2m18s       Normal    SuccessfulDelete    replicaset/webapp-6c59b98977   Deleted pod: webapp-6c59b98977-snqhg
+2m18s       Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-j758n
+2m18s       Normal    SuccessfulCreate    replicaset/webapp-6c59b98977   Created pod: webapp-6c59b98977-fw4f6
+22m         Normal    Scheduled           pod/webapp-7bbcbb5f68-gxkqj    Successfully assigned webapp/webapp-7bbcbb5f68-gxkqj to vm2-monitor
+19m         Normal    Pulling             pod/webapp-7bbcbb5f68-gxkqj    Pulling image "nginx:version-que-no-existe"
+19m         Warning   Failed              pod/webapp-7bbcbb5f68-gxkqj    Failed to pull image "nginx:version-que-no-existe": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/nginx:version-que-no-existe": failed to resolve reference "docker.io/library/nginx:version-que-no-existe": docker.io/library/nginx:version-que-no-existe: not found
+19m         Warning   Failed              pod/webapp-7bbcbb5f68-gxkqj    Error: ErrImagePull
+7m42s       Normal    BackOff             pod/webapp-7bbcbb5f68-gxkqj    Back-off pulling image "nginx:version-que-no-existe"
+7m42s       Warning   Failed              pod/webapp-7bbcbb5f68-gxkqj    Error: ImagePullBackOff
+22m         Normal    Scheduled           pod/webapp-7bbcbb5f68-xh6rw    Successfully assigned webapp/webapp-7bbcbb5f68-xh6rw to vm1-objetivo
+19m         Normal    Pulling             pod/webapp-7bbcbb5f68-xh6rw    Pulling image "nginx:version-que-no-existe"
+19m         Warning   Failed              pod/webapp-7bbcbb5f68-xh6rw    Failed to pull image "nginx:version-que-no-existe": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/nginx:version-que-no-existe": failed to resolve reference "docker.io/library/nginx:version-que-no-existe": docker.io/library/nginx:version-que-no-existe: not found
+19m         Warning   Failed              pod/webapp-7bbcbb5f68-xh6rw    Error: ErrImagePull
+7m47s       Normal    BackOff             pod/webapp-7bbcbb5f68-xh6rw    Back-off pulling image "nginx:version-que-no-existe"
+7m47s       Warning   Failed              pod/webapp-7bbcbb5f68-xh6rw    Error: ImagePullBackOff
+22m         Normal    SuccessfulCreate    replicaset/webapp-7bbcbb5f68   Created pod: webapp-7bbcbb5f68-xh6rw
+22m         Normal    SuccessfulCreate    replicaset/webapp-7bbcbb5f68   Created pod: webapp-7bbcbb5f68-gxkqj
+6m9s        Normal    SuccessfulDelete    replicaset/webapp-7bbcbb5f68   Deleted pod: webapp-7bbcbb5f68-gxkqj
+6m9s        Normal    SuccessfulDelete    replicaset/webapp-7bbcbb5f68   Deleted pod: webapp-7bbcbb5f68-xh6rw
+5m57s       Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-54d7b67f6b from 3 to 2
+28m         Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-54d7b67f6b from 2 to 4
+22m         Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-7bbcbb5f68 from 0 to 1
+22m         Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-54d7b67f6b from 4 to 3
+22m         Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-7bbcbb5f68 from 1 to 2
+6m9s        Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-7bbcbb5f68 from 2 to 0
+6m9s        Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-6c59b98977 from 0 to 2
+5m57s       Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-6c59b98977 from 2 to 3
+5m56s       Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-54d7b67f6b from 2 to 1
+5m56s       Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-6c59b98977 from 3 to 4
+5m51s       Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-54d7b67f6b from 1 to 0
+4m44s       Normal    ScalingReplicaSet   deployment/webapp              Scaled up replica set webapp-6c59b98977 from 4 to 5
+4m44s       Normal    ScalingReplicaSet   deployment/webapp              Scaled down replica set webapp-6c59b98977 from 5 to 4
+2m18s       Normal    ScalingReplicaSet   deployment/webapp              (combined from similar events): Scaled up replica set webapp-6c59b98977 from 2 to 4
