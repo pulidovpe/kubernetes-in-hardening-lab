@@ -1,0 +1,19 @@
+Name:               argocd/webapp
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          webapp
+URL:                https://argocd.example.com/applications/webapp
+Source:
+- Repo:             https://github.com/pulidovpe/kubernetes-in-hardening-lab
+  Target:           HEAD
+  Path:             apps/webapp
+SyncWindow:         Sync Allowed
+Sync Policy:        Manual
+Sync Status:        Synced to HEAD (df6e221)
+Health Status:      Healthy
+
+GROUP  KIND        NAMESPACE  NAME    STATUS   HEALTH   HOOK  MESSAGE
+       Namespace   webapp     webapp  Running  Synced         namespace/webapp unchanged
+       Service     webapp     webapp  Synced   Healthy        service/webapp unchanged
+apps   Deployment  webapp     webapp  Synced   Healthy        deployment.apps/webapp configured
+       Namespace              webapp  Synced                  
