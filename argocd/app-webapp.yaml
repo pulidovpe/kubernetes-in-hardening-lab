@@ -1,0 +1,224 @@
+metadata:
+  creationTimestamp: "2026-07-01T16:32:59Z"
+  generation: 19
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          .: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source: {}
+    manager: argocd-server
+    operation: Update
+    time: "2026-07-01T16:41:26Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          .: {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            .: {}
+            f:initiatedBy:
+              .: {}
+              f:username: {}
+            f:retry: {}
+            f:sync:
+              .: {}
+              f:revision: {}
+              f:source:
+                .: {}
+                f:path: {}
+                f:repoURL: {}
+                f:targetRevision: {}
+              f:syncStrategy:
+                .: {}
+                f:hook: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            .: {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              .: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:summary:
+          f:images: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2026-07-01T16:44:39Z"
+  name: webapp
+  namespace: argocd
+  resourceVersion: "458862"
+  uid: 38266d82-dd2d-41f6-8098-c8cec364a38e
+spec:
+  destination:
+    namespace: webapp
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: apps/webapp
+    repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+    targetRevision: HEAD
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-07-01T16:41:27Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-07-01T16:35:21Z"
+    deployedAt: "2026-07-01T16:35:21Z"
+    id: 0
+    initiatedBy:
+      username: admin
+    revision: 52bc0d6db36a02b5f613a5eb11eab15f01bc6a9a
+    source:
+      path: apps/webapp
+      repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+      targetRevision: HEAD
+  - deployStartedAt: "2026-07-01T16:41:25Z"
+    deployedAt: "2026-07-01T16:41:25Z"
+    id: 1
+    initiatedBy:
+      username: admin
+    revision: df6e22144548a4a6b24738a1116796aa00314702
+    source:
+      path: apps/webapp
+      repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2026-07-01T16:41:25Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        username: admin
+      retry: {}
+      sync:
+        revision: df6e22144548a4a6b24738a1116796aa00314702
+        source:
+          path: apps/webapp
+          repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+          targetRevision: HEAD
+        syncStrategy:
+          hook: {}
+    phase: Succeeded
+    startedAt: "2026-07-01T16:41:25Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/webapp unchanged
+        name: webapp
+        namespace: webapp
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/webapp unchanged
+        name: webapp
+        namespace: webapp
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - nginx:alpine
+        kind: Deployment
+        message: deployment.apps/webapp configured
+        name: webapp
+        namespace: webapp
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: df6e22144548a4a6b24738a1116796aa00314702
+      source:
+        path: apps/webapp
+        repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+        targetRevision: HEAD
+  reconciledAt: "2026-07-01T16:44:39Z"
+  resourceHealthSource: appTree
+  resources:
+  - kind: Namespace
+    name: webapp
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: webapp
+    namespace: webapp
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: webapp
+    namespace: webapp
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - nginx:alpine
+  sync:
+    comparedTo:
+      destination:
+        namespace: webapp
+        server: https://kubernetes.default.svc
+      source:
+        path: apps/webapp
+        repoURL: https://github.com/pulidovpe/kubernetes-in-hardening-lab
+        targetRevision: HEAD
+    revision: df6e22144548a4a6b24738a1116796aa00314702
+    status: Synced
