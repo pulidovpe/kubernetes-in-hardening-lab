@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webapp
+  name: webapp-v2  # Nombre único para evitar colisiones en la UI
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -14,9 +14,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: webapp
-  syncPolicy: 
+  syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-    - CreateNamspace=true
