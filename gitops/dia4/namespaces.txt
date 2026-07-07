@@ -1,0 +1,13 @@
+NAME              STATUS   AGE
+argocd            Active   7d3h
+default           Active   18d
+desarrollo        Active   18d
+falco             Active   16d
+guestbook         Active   103m
+httpbin           Active   31m
+kube-node-lease   Active   18d
+kube-public       Active   18d
+kube-system       Active   18d
+monitoreo         Active   18d
+produccion        Active   18d
+webapp            Active   5d8h

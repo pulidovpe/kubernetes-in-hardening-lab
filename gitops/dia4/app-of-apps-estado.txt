@@ -1,0 +1,6 @@
+NAME              CLUSTER                         NAMESPACE  PROJECT  STATUS     HEALTH       SYNCPOLICY  CONDITIONS                REPO                                                      PATH            TARGET
+argocd/guestbook  https://kubernetes.default.svc  guestbook  default  Synced     Healthy      Auto-Prune  <none>                    https://github.com/pulidovpe/kubernetes-in-hardening-lab  apps/guestbook  HEAD
+argocd/httpbin    https://kubernetes.default.svc  httpbin    default  Synced     Healthy      Auto-Prune  <none>                    https://github.com/pulidovpe/kubernetes-in-hardening-lab  apps/httpbin    HEAD
+argocd/root-app   https://kubernetes.default.svc  argocd     default  Synced     Healthy      Auto-Prune  <none>                    https://github.com/pulidovpe/kubernetes-in-hardening-lab  argocd          HEAD
+argocd/webapp     https://kubernetes.default.svc  webapp     default  OutOfSync  Healthy      Auto-Prune  SharedResourceWarning     https://github.com/pulidovpe/kubernetes-in-hardening-lab  apps/webapp     HEAD
+argocd/webapp-v2  https://kubernetes.default.svc  webapp     default  OutOfSync  Progressing  Auto-Prune  SharedResourceWarning(2)  https://github.com/pulidovpe/kubernetes-in-hardening-lab  apps/webapp     HEAD
